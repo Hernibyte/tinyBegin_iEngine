@@ -1,8 +1,8 @@
 #pragma once
 
-extern Application* CreateApp();
+extern tinyE::Application* CreateApp();
 
-inline int main(int argc, char** argv)
+int main(int argc, char** argv)
 {
     auto App = CreateApp();
     App->Run();

@@ -1,12 +1,22 @@
 #pragma once
+#include <memory>
 
-class Application 
+namespace tinyE
 {
-public:
 
-    Application();
-    virtual ~Application();
+    class Window;
+    
+    class Application
+    {
+    public:
 
-    [[noreturn]] void Run();
+        Application();
+        virtual ~Application();
 
-};
+        void Run();
+
+    private:
+        std::unique_ptr<Window> WindowInstance;
+    };
+
+}

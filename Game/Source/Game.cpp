@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-class MyGame : public Application
+class MyGame : public tinyE::Application
 {
 public:
     MyGame()
@@ -12,7 +12,7 @@ public:
     ~MyGame() override = default;
 };
 
-Application* CreateApp()
+tinyE::Application* CreateApp()
 {
     return new MyGame();
 }

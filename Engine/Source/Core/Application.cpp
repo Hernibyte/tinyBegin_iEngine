@@ -1,16 +1,27 @@
 #include "Core/Application.hpp"
 
-Application::Application()
+#include "Core/Window/Window.hpp"
+
+namespace tinyE
 {
     
-}
+    Application::Application()
+    {
+        WindowInstance = std::make_unique<Window>();
+    }
 
-Application::~Application()
-{
+    Application::~Application()
+    {
+        
+    }
+
+    void Application::Run()
+    {
+        WindowInstance->InitWindow();
+        WindowInstance->UpdateWindowEvent([]()
+        {
+            
+        });
+    }
     
-}
-
-void Application::Run()
-{
-    while (true);
 }
